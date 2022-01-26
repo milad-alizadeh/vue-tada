@@ -8,9 +8,6 @@
     "sourceMap": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "outDir": "types",
-    "declaration": true,
-    "declarationMap": true,
     "paths": {
       "@/*": [
         "./src/*"

@@ -2,9 +2,10 @@
   "name": "ta-da",
   "version": "0.1.0",
   "scripts": {
-    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "build": "tsup src/index.ts --format esm,cjs --dts --sourcemap --minify --clean",
     "lint": "eslint --ext .ts,.js --ignore-path .gitignore --fix src",
     "prepublishOnly": "npm run build",
+    "help": "tsup --help",
     "test": "jest src"
   },
   "dependencies": {
@@ -35,7 +36,6 @@
     "@vue/eslint-config-typescript": "^10.0.0",
     "eslint": "^8.7.0",
     "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-tailwindcss": "^3.3.0",
     "eslint-plugin-vue": "^8.3.0",
     "postcss": "^8.4.5",
     "prettier": "^2.5.1",

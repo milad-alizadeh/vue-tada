@@ -41,6 +41,8 @@ const createDirective = (
     }
 
     observer.observe(el, elementOptions)
+
+    console.log(observersMap, 'hello')
   },
 
   /**

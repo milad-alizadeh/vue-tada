@@ -1,12 +1,7 @@
 process.env.TZ = 'UTC'
 
 module.exports = {
-  moduleFileExtensions: [
-    'js',
-    'jsx',
-    'json',
-    'ts',
-  ],
+  moduleFileExtensions: ['js', 'jsx', 'json', 'ts'],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
   },
