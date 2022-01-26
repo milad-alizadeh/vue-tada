@@ -36,10 +36,10 @@ export interface ElementOptions {
   transformScale?: number
   /** The easing of animation. */
   easing?: string
-  /** The css classes to apply when the element is intersecting */
-  intersectingClasses?: string[]
-  /** The css classes to apply when the element is not intersecting */
-  nonIntersectingClasses?: string[]
+  /** The css classes to apply when the element is intersecting with root element */
+  enterClasses?: string[]
+  /** The css classes to apply when the element is not intersecting with root element */
+  exitClasses?: string[]
   /** Intersector observer options */
   observerOptions?: ObserverOptions
   /** Whether the animation should only be applied once or should be reversed when scrolling back */

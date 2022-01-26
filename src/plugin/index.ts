@@ -12,8 +12,8 @@ export const plugin: TadaPlugin = {
     let globalElementOptions: ElementOptions = {
       animation: AnimationTypes.Fade,
       animationDisabled: false,
-      intersectingClasses: [],
-      nonIntersectingClasses: [],
+      enterClasses: [],
+      exitClasses: [],
       once: false,
     }
 

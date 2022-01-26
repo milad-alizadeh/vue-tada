@@ -37,13 +37,8 @@ export default class Tada {
       const options = this.getElementOptions(target)
       if (!options) return
 
-      const {
-        once,
-        callback,
-        animationDisabled,
-        intersectingClasses,
-        nonIntersectingClasses,
-      } = options
+      const { once, callback, animationDisabled, enterClasses, exitClasses } =
+        options
       const targetElement = this.getTarget(target, options)
 
       // Execute callback
@@ -52,17 +47,16 @@ export default class Tada {
       // If element is intersecting
       if (entry.intersectionRatio >= this.threshold) {
         if (!animationDisabled) this.animate(targetElement)
-        this.addIntersectingClasses(targetElement, intersectingClasses)
-        this.removeNonIntersectingClasses(targetElement, nonIntersectingClasses)
+        this.addEnterClasses(targetElement, enterClasses)
+        this.removeExitClasses(targetElement, exitClasses)
 
         // Unobserve if it's a one time animation
         if (once) this.unobserve(target)
       } else if (!once) {
         if (!animationDisabled) this.reverseAnimation(targetElement)
 
-        this.addNonIntersectingClasses(targetElement, nonIntersectingClasses)
-
-        this.removeIntersectingClasses(targetElement, intersectingClasses)
+        this.addExitClasses(targetElement, exitClasses)
+        this.removeEnterClasses(targetElement, enterClasses)
       }
     })
   }
@@ -72,10 +66,7 @@ export default class Tada {
    * @param el Element
    * @param classList Class list
    */
-  private removeIntersectingClasses(
-    el: HTMLElement,
-    classList?: string[]
-  ): void {
+  private removeEnterClasses(el: HTMLElement, classList?: string[]): void {
     if (classList && classList.length) {
       classList.forEach((className) => el.classList.remove(className))
     }
@@ -86,10 +77,7 @@ export default class Tada {
    * @param el Element
    * @param classList Class list
    */
-  private removeNonIntersectingClasses(
-    el: HTMLElement,
-    classList?: string[]
-  ): void {
+  private removeExitClasses(el: HTMLElement, classList?: string[]): void {
     if (classList && classList.length) {
       classList.forEach((className) => el.classList.remove(className))
     }
@@ -100,7 +88,7 @@ export default class Tada {
    * @param el Element
    * @param classList Class list
    */
-  private addIntersectingClasses(el: HTMLElement, classList?: string[]): void {
+  private addEnterClasses(el: HTMLElement, classList?: string[]): void {
     if (classList && classList.length) {
       classList.forEach((className) => el.classList.add(className))
     }
@@ -111,10 +99,7 @@ export default class Tada {
    * @param el Element
    * @param classList Class list
    */
-  private addNonIntersectingClasses(
-    el: HTMLElement,
-    classList?: string[]
-  ): void {
+  private addExitClasses(el: HTMLElement, classList?: string[]): void {
     if (classList && classList.length) {
       classList.forEach((className) => el.classList.add(className))
     }
