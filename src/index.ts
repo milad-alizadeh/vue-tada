@@ -29,7 +29,10 @@ export const plugin: Plugin = {
     globalObserverOptions = { ...globalObserverOptions, ...options }
 
     // Register directive
-    app.directive('tada', createDirective(globalObserverOptions, globalElementOptions))
+    app.directive(
+      'tada',
+      createDirective(globalObserverOptions, globalElementOptions)
+    )
   },
 }
 

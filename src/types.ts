@@ -1,3 +1,5 @@
+import { App } from 'vue';;
+
 export enum AnimationTypes {
   Fade = 'fade',
   FadeDown = 'fade-down',
@@ -44,4 +46,8 @@ export interface ElementOptions {
   once?: boolean
   /** The target of the animation. Used when wanting to animate a target element based on the intersection of another element */
   target?: (() => HTMLElement) | HTMLElement
+}
+
+export interface tadaPlugin {
+  install: (app: App) => void
 }

@@ -2,26 +2,26 @@
   "name": "ta-da",
   "version": "0.1.0",
   "scripts": {
-    "prepublishOnly": "npm run build",
     "build": "tsup src/index.ts --format esm,cjs --dts",
-    "lint": "eslint --ext .ts,.js,.vue --ignore-path .gitignore --fix src",
+    "lint": "eslint --ext .ts,.js --ignore-path .gitignore --fix src",
+    "prepublishOnly": "npm run build",
     "test": "jest src"
   },
   "dependencies": {
     "vue": "^3.2.26"
   },
   "keywords": [
-    "scroll",
-    "on scroll",
+    "animate on scroll",
     "animate",
     "animations",
-    "animate on scroll",
-    "performance",
+    "css",
     "inrersection observer",
     "lightweight",
-    "css"
+    "on scroll",
+    "performance",
+    "scroll"
   ],
-  "main": "dist/tada.es.js",
+  "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
     "/dist"
@@ -31,9 +31,12 @@
     "@types/node": "^17.0.8",
     "@typescript-eslint/eslint-plugin": "^5.10.0",
     "@typescript-eslint/parser": "^5.10.0",
-    "@vitejs/plugin-vue": "^2.0.1",
+    "@vue/eslint-config-prettier": "^7.0.0",
+    "@vue/eslint-config-typescript": "^10.0.0",
     "eslint": "^8.7.0",
     "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-tailwindcss": "^3.3.0",
+    "eslint-plugin-vue": "^8.3.0",
     "postcss": "^8.4.5",
     "prettier": "^2.5.1",
     "tsup": "^5.11.11",
