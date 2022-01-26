@@ -48,6 +48,6 @@ export interface ElementOptions {
   target?: (() => HTMLElement) | HTMLElement
 }
 
-export interface tadaPlugin {
-  install: (app: App) => void
+export interface TadaPlugin {
+  install: (app: App, options: ElementOptions) => void
 }
