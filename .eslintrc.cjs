@@ -6,7 +6,4 @@ module.exports = {
     '@vue/eslint-config-typescript/recommended',
     '@vue/eslint-config-prettier',
   ],
-  rules: {
-    'no-console': false,
-  },
 }
