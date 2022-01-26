@@ -37,11 +37,11 @@ export interface ElementOptions {
   /** The easing of animation. */
   easing?: string
   /** The css classes to apply when the element is intersecting */
-  intersectingClasses: string[]
+  intersectingClasses?: string[]
   /** The css classes to apply when the element is not intersecting */
-  nonIntersectingClasses: string[]
+  nonIntersectingClasses?: string[]
   /** Intersector observer options */
-  observerOptions?: IntersectionObserver
+  observerOptions?: ObserverOptions
   /** Whether the animation should only be applied once or should be reversed when scrolling back */
   once?: boolean
   /** The target of the animation. Used when wanting to animate a target element based on the intersection of another element */
