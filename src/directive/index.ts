@@ -6,8 +6,8 @@ import { ElementOptions, ObserverOptions } from '../types'
 const observersMap = new Map<string, Tada>()
 
 const createDirective = (
-  globalObserverOptions: ObserverOptions,
-  globalElementOptions: ElementOptions
+  globalElementOptions: ElementOptions,
+  globalObserverOptions: ObserverOptions
 ): Directive => ({
   /**
    * Observe element
