@@ -46,6 +46,34 @@ describe('helpers', () => {
         pages: 500,
       })
     })
+
+    test('merges wrong type correctly', () => {
+      const object1 = <Book>{
+        title: 'The Great Gatsby',
+        author: 'F. Scott Fitzgerald',
+      }
+      const object2 = null
+      const results = mergeOptions(object1, object2)
+
+      expect(results).toEqual({
+        title: 'The Great Gatsby',
+        author: 'F. Scott Fitzgerald',
+      })
+    })
+
+    test('merges wrong type correctly', () => {
+      const object1 = <Book>{
+        title: 'The Great Gatsby',
+        author: 'F. Scott Fitzgerald',
+      }
+      const object2 = null
+      const results = mergeOptions(object2, object1)
+
+      expect(results).toEqual({
+        title: 'The Great Gatsby',
+        author: 'F. Scott Fitzgerald',
+      })
+    })
   })
   describe('kebabCase', () => {
     test('converts a string to kebab case', () => {
