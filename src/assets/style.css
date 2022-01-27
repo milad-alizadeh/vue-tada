@@ -28,11 +28,12 @@
   --tada-ease-in-back: cubic-bezier(.6, -.28, .735, .045);
   --tada-ease-out-back: cubic-bezier(.175, .885, .32, 1.275);
   --tada-ease-in-out-back: cubic-bezier(.68, -.55, .265, 1.55);
+  
   --tada-transform-distance: 2rem;
   --tada-transform-scale: 0.2;
   --tada-delay: 0;
   --tada-duration: 500ms;
-  --tada-easing: ease-in-out;
+  --tada-easing: --tada-ease;
 }
 
 .tada-fade-up {
