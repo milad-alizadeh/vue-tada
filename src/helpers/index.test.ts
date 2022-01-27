@@ -1,26 +1,65 @@
 import { mergeOptions, kebabCase } from '.'
 
+interface Book {
+  title: string
+  author: string
+  pages: number
+}
+
 describe('helpers', () => {
   describe('mergeOptions', () => {
-    test('merges keys correctly', () => {
-      const object1 = {
-        key1: 'value1',
-        key2: 'value2',
-        key3: 'value3',
+    test('overrides the key of the second argument', () => {
+      const object1 = <Book>{
+        title: 'The Great Gatsby',
+        author: 'F. Scott Fitzgerald',
+        pages: 200,
       }
 
-      const object2 = {
-        key1: 'a',
-        key2: 'b',
-        key3: 'c',
+      const object2 = <Book>{
+        title: 'Crime and Punishment',
+        author: 'Fyodor Dostoyevsky',
+        pages: 500,
       }
 
       const results = mergeOptions(object1, object2)
       expect(results).toEqual({
-        key1: 'a',
-        key2: 'b',
-        key3: 'c',
+        title: 'Crime and Punishment',
+        author: 'Fyodor Dostoyevsky',
+        pages: 500,
       })
     })
+
+    test('merges partially correctly', () => {
+      const object1 = <Book>{
+        title: 'The Great Gatsby',
+        author: 'F. Scott Fitzgerald',
+      }
+
+      const object2 = <Book>{
+        pages: 500,
+      }
+
+      const results = mergeOptions(object1, object2)
+      expect(results).toEqual({
+        title: 'The Great Gatsby',
+        author: 'F. Scott Fitzgerald',
+        pages: 500,
+      })
+    })
+  })
+  describe('kebabCase', () => {
+    test('converts a string to kebab case', () => {
+      expect(kebabCase('The Great Gatsby')).toBe('the-great-gatsby')
+    })
+  })
+  test('PascalCase to kebab-case', () => {
+    expect(kebabCase('PascalCase')).toBe('pascal-case')
+  })
+  test('camelCase to kebab-case', () => {
+    expect(kebabCase('camelCase')).toBe('camel-case')
+  })
+
+  test('snake_case to kebab-case', () => {
+    expect(kebabCase('snake_case')).toBe('snake-case')
   })
 })

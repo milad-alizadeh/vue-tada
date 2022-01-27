@@ -1,0 +1,7 @@
+{
+  "workbench.settings.editor": "json",
+  "editor.fontLigatures": false,
+  "jestrunner.jestCommand": "npm run test --",
+  "jest.showCoverageOnLoad": true,
+  "jestrunner.configPath": "./jest.config.js",
+}
