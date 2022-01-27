@@ -8,8 +8,8 @@
     "help": "tsup --help",
     "test": "jest src"
   },
-  "dependencies": {
-    "vue": "^3.2.26"
+  "peerDependencies": {
+    "vue": ">=3"
   },
   "keywords": [
     "animate on scroll",
