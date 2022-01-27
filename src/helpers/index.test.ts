@@ -51,15 +51,16 @@ describe('helpers', () => {
     test('converts a string to kebab case', () => {
       expect(kebabCase('The Great Gatsby')).toBe('the-great-gatsby')
     })
-  })
-  test('PascalCase to kebab-case', () => {
-    expect(kebabCase('PascalCase')).toBe('pascal-case')
-  })
-  test('camelCase to kebab-case', () => {
-    expect(kebabCase('camelCase')).toBe('camel-case')
-  })
 
-  test('snake_case to kebab-case', () => {
-    expect(kebabCase('snake_case')).toBe('snake-case')
+    test('PascalCase to kebab-case', () => {
+      expect(kebabCase('PascalCase')).toBe('pascal-case')
+    })
+    test('camelCase to kebab-case', () => {
+      expect(kebabCase('camelCase')).toBe('camel-case')
+    })
+
+    test('snake_case to kebab-case', () => {
+      expect(kebabCase('snake_case')).toBe('snake-case')
+    })
   })
 })
