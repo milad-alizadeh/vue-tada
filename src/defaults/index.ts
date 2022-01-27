@@ -1,7 +1,7 @@
-import { ElementOptions, ObserverOptions, AnimationTypes } from '../types'
+import { ElementOptions, ObserverOptions } from '../types'
 
 export const defaultElementOptions: ElementOptions = {
-  animation: AnimationTypes.Fade,
+  animation: 'fade',
   animationDisabled: false,
   enterClasses: [],
   exitClasses: [],

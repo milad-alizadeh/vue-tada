@@ -1,15 +1,5 @@
 import { App } from 'vue'
 
-export enum AnimationTypes {
-  Fade = 'fade',
-  FadeDown = 'fade-down',
-  FadeLeft = 'fade-left',
-  FadeRight = 'fade-right',
-  FadeUp = 'fade-up',
-  ZoomIn = 'zoom-in',
-  ZoomOut = 'zoom-out',
-}
-
 export interface ObserverOptions {
   /** The element that is used as the viewport for checking visibility of the target. Must be the ancestor of the target. Defaults to the browser viewport if not specified or if null. https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API  */
   root?: Element | Document | null
@@ -23,7 +13,14 @@ export interface ElementOptions {
   /** Whether the default animation properties should be applied. Useful when using custom animation or callbacks */
   animationDisabled?: boolean
   /** The animation type to use */
-  animation?: AnimationTypes
+  animation?:
+    | 'fade'
+    | 'fade-down'
+    | 'fade-left'
+    | 'fade-right'
+    | 'fade-up'
+    | 'zoom-in'
+    | 'zoom-out'
   /** The callback to call when the element is intersecting or not intersecting */
   callback?: (entry: IntersectionObserverEntry, options: ElementOptions) => void
   /** The delay to apply before the animation starts */
