@@ -5,7 +5,7 @@ import { ElementOptions, ObserverOptions } from '../types'
 // Keep track of all observer instances
 const observersMap = new Map<string, Tada>()
 
-const createDirective = (
+export const createDirective = (
   globalElementOptions: ElementOptions,
   globalObserverOptions: ObserverOptions
 ): Directive => ({
@@ -72,5 +72,3 @@ const createDirective = (
     }
   },
 })
-
-export default createDirective

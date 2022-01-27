@@ -1,25 +1,27 @@
 import { App } from 'vue'
 import { ElementOptions, ObserverOptions, TadaPlugin } from '../types'
-import createDirective from '../directive'
-import { globalElementOptions, globalObserverOptions } from '../defaults'
+import { createDirective } from '../directive'
+import { defaultElementOptions, defaultObserverOptions } from '../defaults'
 import { mergeOptions } from '../helpers'
-const DIRECTIVE_NAME = 'tada'
+
+export const DIRECTIVE_NAME = 'tada'
 
 export const plugin: TadaPlugin = {
-  install: (app: App, options: ElementOptions) => {
-    const mergedElementOptions: ElementOptions = mergeOptions(
-      globalElementOptions,
+  install: (app: App, options?: ElementOptions) => {
+    const globalElementOptions = mergeOptions(
+      defaultElementOptions,
       options
-    )
+    ) as ElementOptions
 
-    const mergedObserverOptions: ObserverOptions = mergeOptions(
-      globalObserverOptions,
-      options.observerOptions
-    )
+    const globalObserverOptions = mergeOptions(
+      defaultObserverOptions,
+      options?.observerOptions
+    ) as ObserverOptions
+
     // Register directive
     app.directive(
       DIRECTIVE_NAME,
-      createDirective(mergedElementOptions, mergedObserverOptions)
+      createDirective(globalElementOptions, globalObserverOptions)
     )
   },
 }

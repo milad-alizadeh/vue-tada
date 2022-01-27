@@ -1,6 +1,6 @@
 import { ElementOptions, ObserverOptions, AnimationTypes } from '../types'
 
-export const globalElementOptions: ElementOptions = {
+export const defaultElementOptions: ElementOptions = {
   animation: AnimationTypes.Fade,
   animationDisabled: false,
   enterClasses: [],
@@ -8,7 +8,7 @@ export const globalElementOptions: ElementOptions = {
   once: false,
 }
 
-export const globalObserverOptions: ObserverOptions = {
+export const defaultObserverOptions: ObserverOptions = {
   root: null,
   rootMargin: '0px',
   threshold: 0.5,
