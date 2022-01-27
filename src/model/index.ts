@@ -212,7 +212,7 @@ export default class Tada {
       targetElement.style.setProperty('--tada-duration', `${duration}ms`)
     }
     if (easing) {
-      targetElement.style.setProperty('--tada-easing', `var(--${easing})`)
+      targetElement.style.setProperty('--tada-easing', `var(--tada-${easing})`)
     }
   }
 

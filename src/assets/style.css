@@ -1,43 +1,33 @@
-/* Easing */
 :root {
-  --linear: linear;
-  --ease: ease;
-  --ease-in: ease-in;
-  --ease-out: ease-out;
-  --ease-in-out: ease-in-out;
-
-  --ease-in-cubic: cubic-bezier(.55, .055, .675, .19);
-  --ease-out-cubic: cubic-bezier(.215, .61, .355, 1);
-  --ease-in-out-cubic: cubic-bezier(.645, .045, .355, 1);
-
-  --ease-in-circ: cubic-bezier(.6, .04, .98, .335);
-  --ease-out-circ: cubic-bezier(.075, .82, .165, 1);
-  --ease-in-out-circ: cubic-bezier(.785, .135, .15, .86);
-
-  --ease-in-expo: cubic-bezier(.95, .05, .795, .035);
-  --ease-out-expo: cubic-bezier(.19, 1, .22, 1);
-  --ease-in-out-expo: cubic-bezier(1, 0, 0, 1);
-
-  --ease-in-quad: cubic-bezier(.55, .085, .68, .53);
-  --ease-out-quad: cubic-bezier(.25, .46, .45, .94);
-  --ease-in-out-quad: cubic-bezier(.455, .03, .515, .955);
-
-  --ease-in-quart: cubic-bezier(.895, .03, .685, .22);
-  --ease-out-quart: cubic-bezier(.165, .84, .44, 1);
-  --ease-in-out-quart: cubic-bezier(.77, 0, .175, 1);
-
-  --ease-in-quint: cubic-bezier(.755, .05, .855, .06);
-  --ease-out-quint: cubic-bezier(.23, 1, .32, 1);
-  --ease-in-out-quint: cubic-bezier(.86, 0, .07, 1);
-
-  --ease-in-sine: cubic-bezier(.47, 0, .745, .715);
-  --ease-out-sine: cubic-bezier(.39, .575, .565, 1);
-  --ease-in-out-sine: cubic-bezier(.445, .05, .55, .95);
-
-  --ease-in-back: cubic-bezier(.6, -.28, .735, .045);
-  --ease-out-back: cubic-bezier(.175, .885, .32, 1.275);
-  --ease-in-out-back: cubic-bezier(.68, -.55, .265, 1.55);
-
+  --tada-linear: linear;
+  --tada-ease: ease;
+  --tada-ease-in: ease-in;
+  --tada-ease-out: ease-out;
+  --tada-ease-in-out: ease-in-out;
+  --tada-ease-in-cubic: cubic-bezier(.55, .055, .675, .19);
+  --tada-ease-out-cubic: cubic-bezier(.215, .61, .355, 1);
+  --tada-ease-in-out-cubic: cubic-bezier(.645, .045, .355, 1);
+  --tada-ease-in-circ: cubic-bezier(.6, .04, .98, .335);
+  --tada-ease-out-circ: cubic-bezier(.075, .82, .165, 1);
+  --tada-ease-in-out-circ: cubic-bezier(.785, .135, .15, .86);
+  --tada-ease-in-expo: cubic-bezier(.95, .05, .795, .035);
+  --tada-ease-out-expo: cubic-bezier(.19, 1, .22, 1);
+  --tada-ease-in-out-expo: cubic-bezier(1, 0, 0, 1);
+  --tada-ease-in-quad: cubic-bezier(.55, .085, .68, .53);
+  --tada-ease-out-quad: cubic-bezier(.25, .46, .45, .94);
+  --tada-ease-in-out-quad: cubic-bezier(.455, .03, .515, .955);
+  --tada-ease-in-quart: cubic-bezier(.895, .03, .685, .22);
+  --tada-ease-out-quart: cubic-bezier(.165, .84, .44, 1);
+  --tada-ease-in-out-quart: cubic-bezier(.77, 0, .175, 1);
+  --tada-ease-in-quint: cubic-bezier(.755, .05, .855, .06);
+  --tada-ease-out-quint: cubic-bezier(.23, 1, .32, 1);
+  --tada-ease-in-out-quint: cubic-bezier(.86, 0, .07, 1);
+  --tada-ease-in-sine: cubic-bezier(.47, 0, .745, .715);
+  --tada-ease-out-sine: cubic-bezier(.39, .575, .565, 1);
+  --tada-ease-in-out-sine: cubic-bezier(.445, .05, .55, .95);
+  --tada-ease-in-back: cubic-bezier(.6, -.28, .735, .045);
+  --tada-ease-out-back: cubic-bezier(.175, .885, .32, 1.275);
+  --tada-ease-in-out-back: cubic-bezier(.68, -.55, .265, 1.55);
   --tada-transform-distance: 2rem;
   --tada-transform-scale: 0.2;
   --tada-delay: 0;
@@ -45,7 +35,6 @@
   --tada-easing: ease-in-out;
 }
 
-/* Animations */
 .tada-fade-up {
   transform: translateY(var(--tada-transform-distance));
 }

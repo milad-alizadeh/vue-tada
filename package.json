@@ -2,7 +2,7 @@
   "name": "ta-da",
   "version": "0.1.0",
   "scripts": {
-    "build": "tsup src/index.ts --format esm,cjs --dts --sourcemap --minify --clean --metafile",
+    "build": "tsup src/index.ts --format esm,cjs --dts --sourcemap --clean --metafile",
     "lint": "eslint --ext .ts,.js --ignore-path .gitignore --fix src",
     "prepublishOnly": "npm run build",
     "help": "tsup --help",
