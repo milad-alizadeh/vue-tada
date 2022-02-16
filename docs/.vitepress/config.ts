@@ -1,6 +1,6 @@
 import { defineConfig } from 'vitepress';
 
 export default defineConfig({
-  title: 'Ta-Da!',
+  title: '🎉 Ta-Da! 🎉',
   description: 'Just playing around.',
 });
