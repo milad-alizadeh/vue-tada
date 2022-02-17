@@ -2,7 +2,7 @@
 
 
 <script setup>
-import Grid from '../components/Grid.vue'
+import Grid from './Grid.vue'
 </script>
 
 
