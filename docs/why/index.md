@@ -2,7 +2,7 @@
 
 
 <script setup>
-import Grid from './Grid.vue'
+import VGrid from '../components/VGrid.vue'
 </script>
 
 
@@ -10,7 +10,7 @@ import Grid from './Grid.vue'
 
 This is a .md using a custom component
 
-<Grid />
+<VGrid />
 
 ## More docs
 
