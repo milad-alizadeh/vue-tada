@@ -1,3 +1,8 @@
+---
+sidebar: false
+navbar: false
+---
+
 <VDemo />
 
 <script setup>
